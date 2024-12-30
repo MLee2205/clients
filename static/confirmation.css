@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./Images/fond3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto; /* Assure une barre de défilement verticale */
+    overflow-x: hidden; /* Empêche une barre de défilement horizontale */
+}
+
+.containe {
+    margin-top: 80px; /* Ajuste la hauteur en fonction de la taille du header */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Positionne le contenu en haut */
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Ajouter de l'espace entre les boutons */
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 15px 30px; /* Augmenter la taille des boutons */
+    font-size: 18px; /* Augmenter la taille de la police */
+    color: white;
+    background-color: var(--blaze-orange); /* Exemple de couleur */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-container button a {
+    color: blue; /* Assurez-vous que le lien dans le bouton soit blanc */
+    text-decoration: none; /* Enlever la décoration de texte */
+}
+
+.button-container button:hover {
+    background-color: #007bff;
+}
+
+
+
+
+.large-link {
+    display: block;
+    margin-top: 100px; /* Augmenter l'espace au-dessus du lien */
+    font-size: 24px; /* Augmenter la taille de la police pour le lien */
+    padding: 10px 20px; /* Augmenter la taille du lien pour le rendre plus visible */
+    background-color:#FF6B35; /* Changer la couleur du lien en jaune */
+    color: black; /* Changer la couleur du texte en noir pour un contraste */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.large-link:hover {
+    background-color:#007bff; /* Couleur jaune clair au survol */
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Assure que le footer reste en bas */
+    width: 100%; /* S'assure que le footer s'étend sur toute la largeur */
+    margin-top: 200px; /* Ajouter un espace entre le contenu et le footer */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+

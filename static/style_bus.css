@@ -1,0 +1,113 @@
+/* Conteneur principal */
+.bus-categories {
+    top: 1rem;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Masque le débordement horizontal */
+    position: relative;
+}
+
+.bus-categories h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Conteneur du carrousel */
+.bus-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Défilement horizontal */
+    scroll-behavior: smooth; /* Défilement fluide */
+    padding: 10px;
+    scrollbar-width: none; /* Cache la barre de défilement pour Firefox */
+}
+
+.bus-grid::-webkit-scrollbar {
+    display: none; /* Cache la barre de défilement pour Chrome, Safari */
+}
+
+/* Carte individuelle */
+.bus-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 300px; /* Définit la largeur de chaque carte */
+}
+
+.bus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+.bus-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Titres */
+.bus-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraphes */
+.bus-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Flèches de navigation */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-nav.left {
+    left: 10px;
+}
+
+.carousel-nav.right {
+    right: 10px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .bus-categories h1 {
+        font-size: 2rem;
+    }
+
+    .bus-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .bus-card p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-nav {
+        font-size: 1.5rem;
+        width: 30px;
+        height: 30px;
+    }
+}

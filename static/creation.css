@@ -1,0 +1,396 @@
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./Images/fond3.jpeg');
+    background-repeat: no-repeat;
+    background-size:100%;
+
+
+
+}
+
+ section  #imfond{
+    top: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 340px; /* Utilisez min-height au lieu de height */}
+
+        
+        @keyframes slide {
+            from { background-position: 0 0; }
+            to { background-position: 100% 0; }
+        }
+
+
+
+        
+        :root {
+    --blaze-orange: #FF6B35;
+    --azure-dragon: #08347E;
+    --picket-blue-wood: #2D4558;
+    --below-zero: #84cef0;
+    --blue-oar: #64829F;
+    --oxford: #AEBBC7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/*
+body {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+*/
+header {
+    height: 8%;
+    background-color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     margin-bottom: 50px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.logo {
+    width: 150px; 
+    height: auto; 
+    position: absolute;
+    left: 0;
+    top: -20%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--azure-dragon);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blaze-orange);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--azure-dragon);
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main{
+    height: 84%;
+    overflow: auto; /* Ajout de la barre de défilement */
+    padding: 20px; /* Espace entre le contenu et les bords */
+    
+    margin-bottom: 20px;
+}
+
+section.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('fond.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(128, 200, 218, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--blaze-orange);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background-color: #ff8255;
+}
+
+footer {
+    background-color: white;
+    color: var(--azure-dragon);
+    padding: 2rem;
+    margin-top: auto;
+    height: 8%;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 10%;
+    bottom: 5;
+}
+
+.footer-links a {
+    color: var(--azure-dragon);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: var(--blaze-orange);
+}
+
+
+/*
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Réduit la taille sur les petits écrans 
+    }
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}*/
+
+@media (max-width: 768px) {
+    /* Général */
+    body {
+        overflow: auto; /* Permet le défilement si nécessaire */
+    }
+
+    header {
+        padding: 0.5rem 1rem; /* Réduit l'espace du header */
+    }
+
+    .logo {
+        width: 80px; /* Réduit encore la taille du logo */
+        top: 10%; /* Réaligne le logo */
+    }
+
+    nav {
+        flex-direction: column;
+    }
+    .menu-toggle {
+        display: block; /* Montre le bouton uniquement sur mobile */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex; /* Montre les liens quand la classe "show" est ajoutée */
+    }
+
+    /* Section Hero */
+    .hero h1 {
+        font-size: 2rem; /* Réduit la taille du titre */
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem; /* Réduit la taille du texte */
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem; /* Réduit la taille du bouton */
+        padding: 0.8rem 1.5rem; /* Ajuste les marges internes */
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column; /* Arrange les éléments en colonne */
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        position: static; /* Supprime le positionnement absolu */
+        margin-top: 1rem; /* Ajoute un espace entre les éléments */
+        justify-content: center;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem; /* Réduit la taille des liens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour très petits écrans (smartphones étroits) */
+    .hero-content {
+        padding: 1rem; /* Réduit le padding interne */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Réduit davantage le titre */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Réduit encore la taille du texte */
+    }
+
+    .cta-button {
+        font-size: 0.8rem; /* Bouton plus petit */
+        padding: 0.6rem 1.2rem;
+    }
+
+    header {
+        height: auto; /* Laisse le header ajuster sa hauteur */
+        text-align: center; /* Centrer les éléments dans le header */
+    }
+
+    .logo {
+        margin: 0 auto; /* Centre le logo */
+        position: static; /* Supprime les positions absolues */
+    }
+
+    footer {
+        padding: 1rem; /* Réduit le padding général */
+    }
+
+    .footer-content {
+        gap: 0.5rem;
+    }
+}
+  
+  
+  nav {
+            display: flex;
+        }
+
+        .logo {
+            margin-right: auto;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }  
+    
+ 
