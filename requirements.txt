@@ -2,4 +2,4 @@ Flask
 Flask-SQLAlchemy
 marshmallow-sqlalchemy
 pyjwt
-
+psycopg2
